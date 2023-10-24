@@ -18,7 +18,7 @@ Este proyecto es un sistema basado en conocimiento diseñado para realizar prueb
 
 1. Clona el repositorio en tu máquina local:
    ```shell
-   git clone https://github.com/tuusuario/tuproyecto.git
+   git clone https://github.com/Campero727/Proyecto-SBC.git
    ```
 2. Instala los requerimentos para ejecutar
     ```shell
