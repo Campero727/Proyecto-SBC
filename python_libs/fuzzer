@@ -1,0 +1,32 @@
+import requests
+
+def fuzz(url, parameter, payload):
+    """
+    Fuzzer para un sitio web.
+
+    Args:
+        url: La URL del sitio web a fuzzear.
+        parameter: El parámetro a fuzzear.
+        payload: La carga útil a utilizar para el fuzzing.
+
+    Returns:
+        None
+    """
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+    }
+
+    response = requests.get(url, headers=headers, params={parameter: payload})
+
+    if response.status_code != 200:
+        print(f"Error: {response.status_code}")
+    else:
+        print(f"Respuesta: {response.content}")
+
+if __name__ == "__main__":
+    url = "https://example.com/index.php"
+    parameter = "id"
+    payload = "1"
+
+    fuzz(url, parameter, payload)

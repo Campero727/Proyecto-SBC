@@ -11,4 +11,4 @@ if __name__=="__main__":
 	print("Ahora necesito que definas el alcance, asegurate de seleccionar solo una opcion")
 	scope=input("Ingresa una IP, rango o subred que sera el objetivo: ")
 	setScope(scope)
-	setFlags()
+	setFlags(scope)
